@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Panel</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/admin.js" defer></script>
+</head>
+<body class="bg-gray-100 p-8">
+<h1 class="text-3xl font-bold mb-6">Admin Control Panel</h1>
+
+<section class="bg-white p-6 mb-8 rounded-xl shadow">
+<h2 class="text-xl font-bold mb-2">Set Wallet Address</h2>
+<input id="adminWallet" class="border p-3 w-full rounded" placeholder="Paste BTC Wallet Address">
+<button onclick="saveWallet()" class="mt-4 bg-blue-600 text-white px-6 py-2 rounded">Save Wallet</button>
+</section>
+
+<section class="bg-white p-6 mb-8 rounded-xl shadow">
+<h2 class="text-xl font-bold mb-2">Upload QR Code</h2>
+<input type="file" id="qrUploadAdmin" accept="image/*" class="border p-3 w-full rounded">
+<button onclick="saveQrCode()" class="mt-4 bg-green-600 text-white px-6 py-2 rounded">Upload QR</button>
+</section>
+
+<section class="bg-white p-6 rounded-xl shadow">
+<h2 class="text-xl font-bold mb-6">Pricing Images</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div><p class="font-bold mb-1">Bronze</p>
+<input type="file" id="bronzeImg" accept="image/*">
+<button onclick="uploadPricingImg('Bronze','bronzeImg')" class="mt-2 bg-gray-800 text-white px-4 py-1 rounded">Upload</button>
+</div>
+<div><p class="font-bold mb-1">Silver</p>
+<input type="file" id="silverImg" accept="image/*">
+<button onclick="uploadPricingImg('Silver','silverImg')" class="mt-2 bg-gray-800 text-white px-4 py-1 rounded">Upload</button>
+</div>
+<div><p class="font-bold mb-1">Gold</p>
+<input type="file" id="goldImg" accept="image/*">
+<button onclick="uploadPricingImg('Gold','goldImg')" class="mt-2 bg-gray-800 text-white px-4 py-1 rounded">Upload</button>
+</div>
+<div><p class="font-bold mb-1">Platinum</p>
+<input type="file" id="platinumImg" accept="image/*">
+<button onclick="uploadPricingImg('Platinum','platinumImg')" class="mt-2 bg-gray-800 text-white px-4 py-1 rounded">Upload</button>
+</div>
+</div>
+</section>
+
+</body>
+</html>

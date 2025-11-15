@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINERFARM - Cloud Bitcoin Mining</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Use Inter Font -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white">
+
+    <!-- Main Content Container -->
+    <div id="app-container">
+
+        <!-- 1. LANDING PAGE VIEW (Default View: Home, Pricing, About) -->
+        <div id="landing-page" class="view">
+            <!-- 1. Hero Section -->
+            <header id="home" class="bg-[var(--color-primary)] relative overflow-hidden pt-4 pb-20 md:pb-40" style="background: linear-gradient(180deg, var(--color-primary), var(--color-secondary));">
+                <!-- Navigation -->
+                <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex justify-between items-center h-16">
+                        <div class="text-2xl font-black text-white">MINERFARM</div>
+                        <!-- Desktop Navigation Links -->
+                        <div class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+                            <a href="#" data-view-target="landing" data-section-target="#home" class="nav-link text-white hover:text-gray-200 transition">HOME</a>
+                            <a href="#" data-view-target="landing" data-section-target="#pricing" class="nav-link text-white hover:text-gray-200 transition">PRICING</a>
+                            <a href="#" data-view-target="landing" data-section-target="#about" class="nav-link text-white hover:text-gray-200 transition">FAQ</a>
+                            <a href="#" data-view-target="landing" class="nav-link text-white hover:text-gray-200 transition">CONTACTS</a>
+                            <a href="#" data-view-target="landing" class="nav-link text-white hover:text-gray-200 transition">LOGIN</a>
+                            <div class="px-3 py-1 bg-white bg-opacity-20 rounded-full text-white">
+                                CURRENCY: BTC | ETHEREUM
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Hero Content -->
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center pt-16 pb-12">
+                    <!-- Text Content -->
+                    <div class="lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0">
+                        <h1 class="text-6xl md:text-8xl font-black text-white leading-tight">
+                            Cloud <span class="block">Bitcoin mining</span>
+                        </h1>
+                        <p class="mt-6 text-xl text-white opacity-90 max-w-lg mx-auto lg:mx-0">
+                            Mine Bitcoin easily on the cloud without owning hardware.
+                            <span class="block mt-2">Rent our mining units to get guaranteed BTC payouts.</span>
+                        </p>
+                        <div class="mt-10 space-x-4">
+                            <button id="startMiningBtn" class="animated-button bg-[var(--color-accent)] text-white font-bold py-3 px-8 rounded-xl shadow-lg hover:bg-opacity-90 transition duration-300">
+                                Start Mining
+                            </button>
+                            <a href="#" data-view-target="landing" data-section-target="#pricing" class="nav-link animated-button bg-white text-[var(--color-primary)] font-bold py-3 px-8 rounded-xl shadow-lg hover:bg-gray-100 transition duration-300 inline-block">
+                                View Pricing
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Image/Visual -->
+                    <div class="lg:w-1/2 flex justify-center">
+                        <div class="w-full max-w-md h-64 md:h-96 relative">
+                            <!-- Using a placeholder to represent the visual from 1.jpg -->
+                            <img src="https://placehold.co/400x300/283a8a/ffb64d?text=Mining+Rig+Visual" alt="Bitcoin Mining Rig" class="rounded-xl shadow-2xl animate-pulse-slow">
+                            <div class="absolute inset-0 z-0 opacity-20 transform -skew-y-3 -rotate-3 bg-white rounded-full blur-3xl"></div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- 2. Pricing Section -->
+            <section id="pricing" class="pricing-section">
+                <div class="pricing-wave-bottom"></div>
+                
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-white text-center mb-16 fade-in-section">
+                        Choose your mining unit
+                    </h2>
+
+                    <!-- Pricing Cards Grid (Images updated in JS data structure) -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <!-- Cards are dynamically generated by the script below -->
+                    </div>
+
+                    <p class="text-center text-white opacity-80 mt-10 text-sm italic fade-in-section">
+                        *Any purchase is refundable
+                    </p>
+                </div>
+            </section>
+
+            <!-- 3. About/Offer/Payouts Section -->
+            <section id="about" class="py-20 bg-white">
+                <div class="max-w-4xl mx-auto px-4 text-center">
+                    
+                    <!-- Who are we? -->
+                    <div class="mb-16 fade-in-section">
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800">Who are we?</h2>
+                        <div class="w-16 h-1 bg-[var(--color-accent)] mx-auto mt-2 rounded"></div>
+                        <p class="mt-4 text-lg text-gray-600">A team of Cryptocurrency engineering and Blockchain developers.</p>
+                    </div>
+
+                    <!-- Payouts: How do I get my money? -->
+                    <div class="mb-20 fade-in-section">
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800">
+                            Payouts: How do I get my money?
+                        </h2>
+                        <div class="w-16 h-1 bg-[var(--color-accent)] mx-auto mt-2 rounded"></div>
+                        <div class="mt-6 text-lg text-gray-600 space-y-3">
+                            <p>You will get <strong class="text-[var(--color-secondary)]">payouts daily</strong>.</p>
+                            <p>Our system automatically transfers mined coins directly to your BTC wallet.</p>
+                        </div>
+                    </div>
+
+                    <!-- View Pricing Button -->
+                    <div class="fade-in-section">
+                        <a href="#" data-view-target="landing" data-section-target="#pricing" class="nav-link animated-button bg-[var(--color-accent)] text-white font-bold py-3 px-10 rounded-xl shadow-xl hover:bg-opacity-90 transition duration-300 inline-block">
+                            View Pricing
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. How to get a Wallet Section (NEW SECTION) -->
+            <section id="wallet-info" class="py-16 bg-gray-50">
+                <div class="max-w-4xl mx-auto px-4 text-center space-y-8">
+                    <h3 class="text-3xl font-bold text-gray-800 fade-in-section">How to get a BTC Wallet?</h3>
+                    <div class="w-16 h-1 bg-[var(--color-accent)] mx-auto mt-2 rounded"></div>
+                    <div class="text-lg text-gray-600 space-y-4 fade-in-section">
+                        <p>If you prefer security, try KYC cryptocurrency exchange platforms like <a href="https://www.binance.com/" target="_blank" class="text-[var(--color-secondary)] font-semibold hover:underline">Binance</a> or <a href="https://www.coinbase.com/" target="_blank" class="text-[var(--color-secondary)] font-semibold hover:underline">Coinbase</a>.</p>
+                        <p>If you prefer anonymity, try non-KYC cryptocurrency exchange platforms such as <a href="https://shapeshift.com/" target="_blank" class="text-[var(--color-secondary)] font-semibold hover:underline">ShapeShift</a> or <a href="https://www.trezor.io/" target="_blank" class="text-[var(--color-secondary)] font-semibold hover:underline">Trezor Wallet</a>.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Footer -->
+            <footer class="bg-[var(--color-dark-bg)] text-white py-16 px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div class="pt-8 text-sm text-gray-500 border-t border-gray-700 mt-8 fade-in-section">
+                        &copy; 2024 MINERFARM. All rights reserved.
+                    </div>
+                </div>
+            </footer>
+
+        </div> <!-- End of #landing-page -->
+
+
+        <!-- 2. WALLET / CHECKOUT PAGE VIEW -->
+        <div id="wallet-page" class="view hidden bg-white min-h-screen pt-12 pb-16">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Back Link uses JS to switch view back to landing page -->
+                <a href="#" data-view-target="landing" class="nav-link text-sm font-medium text-gray-500 hover:text-[var(--color-primary)] mb-6 inline-block transition">&larr; Back to Pricing</a>
+                
+                <div id="wallet-card-container" class="rounded-2xl shadow-xl overflow-hidden">
+                    
+                    <!-- Unit Header Card (Top Purple Section) -->
+                    <div class="bg-[var(--color-primary)] p-6 md:p-10 text-white" style="background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));">
+                        <h2 id="wallet-unit-title" class="text-3xl md:text-4xl font-black">
+                            Bronze mining unit
+                        </h2>
+                    </div>
+
+                    <!-- Profit Schedule Card (Inner Deep Purple Section) -->
+                    <div class="bg-[var(--color-dark-bg)] p-6 md:p-10 text-white">
+                        <h3 class="text-xl font-bold mb-4">Your profit schedule</h3>
+                        <div id="profit-schedule-table" class="grid grid-cols-6 gap-4 text-center text-sm md:text-base">
+                            <!-- Schedule items injected here by JS -->
+                        </div>
+                        <p class="mt-4 text-sm opacity-75">
+                            Payments are made automatically once a day.
+                        </p>
+                    </div>
+
+                    <!-- Input Fields & Image (Bottom White/Split Section) -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 bg-white">
+                        
+                        <!-- Inputs Section -->
+                        <div class="p-6 md:p-10 bg-gray-50 space-y-6">
+                            <h3 class="text-xl font-bold text-gray-800">Your Order: <span id="wallet-rent-price" class="text-3xl font-black text-[var(--color-primary)]">$10</span></h3>
+                            
+                            <form id="order-form" class="space-y-4">
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700">Email:</label>
+                                    <input type="email" id="email" required placeholder="Please enter your email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] p-3 border-2 transition">
+                                </div>
+                                <div>
+                                    <label for="wallet-input" class="block text-sm font-medium text-gray-700">BTC wallet address for payouts:</label>
+                                    <input type="text" id="wallet-input" required placeholder="Please enter your BTC wallet..." class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] p-3 border-2 transition">
+                                </div>
+
+                                <button type="submit" class="animated-button bg-[var(--color-accent)] text-white font-bold py-3 px-8 rounded-xl shadow-lg hover:bg-opacity-90 transition duration-300 w-full mt-6">
+                                    Order Now
+                                </button>
+                            </form>
+                        </div>
+                        
+                        <!-- Image Section -->
+                        <div class="p-6 md:p-10 flex items-center justify-center bg-white">
+                            <img id="wallet-unit-image" src="" alt="Mining Rig Visual" class="w-2/3 h-auto object-contain">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div> <!-- End of #wallet-page -->
+
+
+        <!-- 3. PAYMENT PAGE VIEW -->
+        <div id="payment-page" class="view hidden bg-[var(--color-bg)] min-h-screen pt-12 pb-12">
+            <div class="wrap" role="main" aria-labelledby="pageTitle">
+                <!-- HERO -->
+                <header class="hero-payment">
+                    <div style="display:flex;align-items:center;justify-content:space-between">
+                        <h1 id="payment-unit-title-full">Bronze <span style="color:white;opacity:.95">mining unit</span></h1>
+                        <div id="payment-unit-title-small" class="title-small">Bronze</div>
+                    </div>
+
+                    <!-- profit schedule -->
+                    <div class="profit-card-payment" role="region" aria-label="Your profit schedule">
+                        <h2 class="text-white">Your profit schedule</h2>
+                        <div id="payment-profit-grid" class="profit-grid-payment" aria-hidden="false">
+                            <!-- Schedule items injected here by JS -->
+                        </div>
+                        <div style="margin-top:12px;font-size:12px;color:rgba(255,255,255,0.85);text-align:center">Payments are made automatically once a day.</div>
+                    </div>
+                </header>
+
+                <!-- MAIN: left = payment, right = waiting -->
+                <section class="main-payment" aria-label="Payment and status">
+                    <!-- LEFT -->
+                    <div class="left-payment">
+                        <h3 class="payment-title">Payment</h3>
+                        <div class="wallet">
+                            <div class="addr" title="Bitcoin address">
+                                <span id="payment-wallet-address">bc1qgwcsk7ejyq3u5747xa9r49lyn3a3dpk7e2xx26</span>
+                                <button id="copyAddr" class="copy" aria-label="Copy wallet address">copy</button>
+                            </div>
+
+                            <div class="amount-row" aria-live="polite">
+                                <!-- Display is managed dynamically by JS -->
+                                <div id="payment-amount-display"></div>
+                                <div id="payment-usd-toggle" class="usd-toggle" title="Click to toggle USD/BTC view"></div>
+                            </div>
+
+                            <!-- QR Code / Placeholder -->
+                            <div class="qr-wrap" aria-hidden="false">
+                                <img id="payment-qr-code" src="assets/uploads/trustqr.png" alt="Bitcoin Payment QR Code" class="qr-img">
+                            </div>
+
+                            <div class="small" style="text-align:center;max-width:320px;margin:8px auto 0">
+                                Transfer the required amount to this wallet. You can request a refund at any time.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT -->
+                    <aside class="right-payment" aria-live="polite">
+                        <div class="note">Mining will start after the first confirmation of your transaction.</div>
+
+                        <div class="spinner" aria-hidden="false" title="Waiting for payment">
+                            <svg width="96" height="96" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <g transform="translate(32,32)">
+                                    <g id="dots">
+                                        <circle cx="0" cy="-20" r="4" fill="rgba(255,182,77,0.95)"/>
+                                        <circle cx="14" cy="-14" r="4" fill="rgba(255,182,77,0.85)"/>
+                                        <circle cx="20" cy="0" r="4" fill="rgba(255,182,77,0.75)"/>
+                                        <circle cx="14" cy="14" r="4" fill="rgba(255,182,77,0.6)"/>
+                                        <circle cx="0" cy="20" r="4" fill="rgba(255,182,77,0.45)"/>
+                                        <circle cx="-14" cy="14" r="4" fill="rgba(255,182,77,0.3)"/>
+                                        <circle cx="-20" cy="0" r="4" fill="rgba(255,182,77,0.2)"/>
+                                        <circle cx="-14" cy="-14" r="4" fill="rgba(255,182,77,0.12)"/>
+                                    </g>
+                                    <animateTransform href="#dots" attributeName="transform" type="rotate" from="0" to="360" dur="1.6s" repeatCount="indefinite"/>
+                                </g>
+                            </svg>
+                        </div>
+
+                        <div id="payment-status-message" style="margin-top:18px;color:#7d7d86">Waiting for payment ...</div>
+                        <div style="margin-top:26px;color:#aaa;font-size:13px">Mining will automatically begin after the network confirms the payment.</div>
+                    </aside>
+                </section>
+
+                <div class="footer-payment">Payments are processed by the blockchain — confirmation time depends on network conditions.</div>
+            </div>
+        </div> <!-- End of #payment-page -->
+
+    </div> <!-- End of #app-container -->
+
+    <!-- Simple Modal for Action Feedback -->
+    <div id="actionModal" class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden items-center justify-center p-4 z-50">
+        <div class="bg-white p-8 rounded-xl shadow-2xl max-w-sm w-full text-center transform transition-all duration-300 scale-90 opacity-0" id="modalContent">
+            <svg class="w-12 h-12 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <h4 id="modalTitle" class="text-xl font-bold mb-2 text-gray-800">Success!</h4>
+            <p id="modalMessage" class="text-gray-600 mb-6">Your order has been placed successfully!</p>
+            <button onclick="closeModal()" class="bg-[var(--color-primary)] text-white py-2 px-6 rounded-lg hover:bg-[var(--color-secondary)] transition">Close</button>
+        </div>
+    </div>
+    
+    <!-- Toast for Copy Feedback -->
+    <div id="toast" class="toast" role="status" aria-live="polite">Copied to clipboard</div>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>

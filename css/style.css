@@ -1,0 +1,154 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap');
+        
+        /* Unified Color Variables */
+        :root {
+            --color-primary: #283a8a; /* Deep Indigo */
+            --color-secondary: #7b3ed6; /* Purple */
+            --color-accent: #ffb64d; /* Orange/Gold */
+            --color-dark-bg: #211c40; /* Dark Blue/Purple for Footer */
+            --color-bg: #f7f8fb; /* Light background for payment page */
+            --color-panel: #e9e7f6; /* Light purple for payment left panel */
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* --- LANDING PAGE STYLES --- */
+        .animated-button {
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+        .animated-button:hover {
+            transform: scale(1.05) translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(255, 182, 77, 0.5), 0 4px 6px -2px rgba(255, 182, 77, 0.2);
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @keyframes pulse-slow {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+        .animate-pulse-slow {
+            animation: pulse-slow 4s ease-in-out infinite;
+        }
+        
+        /* Pricing Section Wave */
+        .pricing-section {
+            background: linear-gradient(180deg, var(--color-primary), var(--color-secondary));
+            position: relative;
+            padding-top: 50px; 
+            padding-bottom: 200px; 
+            z-index: 5;
+        }
+        .pricing-wave-bottom {
+            position: absolute;
+            bottom: 0; 
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background: white; 
+            border-top-left-radius: 50% 100px;
+            border-top-right-radius: 50% 100px;
+            z-index: 10;
+        }
+
+
+        /* --- PAYMENT PAGE STYLES (Simplified) --- */
+        .wrap{
+            width:910px;
+            max-width:100%;
+            border-radius:28px;
+            overflow:hidden;
+            box-shadow:0 8px 28px rgba(16,20,40,0.08);
+            position: relative;
+            background:white;
+        }
+        .hero-payment{
+            background: linear-gradient(90deg,var(--color-primary), var(--color-secondary));
+            color:white;
+            padding:36px 36px 32px;
+            position:relative;
+            min-height:210px;
+        }
+        .hero-payment h1{margin:0;font-weight:700;font-size:22px;color:white;}
+        .hero-payment .title-small{font-weight:600;color:var(--color-accent);float:right;font-size:20px;margin-top:-4px;}
+
+        .profit-card-payment{
+            background: rgba(255,255,255,0.06);
+            width:78%;
+            margin:18px auto 0;
+            padding:22px;
+            border-radius:10px;
+            box-shadow:0 10px 18px rgba(29,16,63,0.12);
+            color:#fff;
+        }
+        .profit-card-payment h2{text-align:center;margin:0 0 12px 0;font-weight:600;font-size:18px;text-decoration:underline;text-underline-offset:6px;opacity:0.95;}
+        .profit-grid-payment{display:flex;justify-content:space-between;gap:12px;align-items:flex-end;flex-wrap:wrap;margin-top:10px;}
+        .profit-item .label{display:block;font-size:12px;color:rgba(255,255,255,0.8)}
+        .profit-item .amount{font-weight:700;color:var(--color-accent);margin-top:6px}
+
+        .main-payment{display:flex;gap:0;background:linear-gradient(180deg,var(--color-panel),#faf9ff);}
+
+        .left-payment{flex:1 1 60%;padding:34px;background:linear-gradient(180deg,#eeecf9,#e6e3f7);}
+        .payment-title{text-align:center;margin:0;font-weight:600;font-size:18px;color:#222;text-decoration:underline;text-underline-offset:6px;}
+        .wallet{margin-top:18px;text-align:center;}
+        .addr{display:inline-flex;gap:10px;align-items:center;background:transparent;padding:6px 8px;border-radius:8px;font-weight:600;font-size:13px;color:#222;}
+        .addr .copy{color:var(--color-accent);cursor:pointer;font-weight:600;font-size:12px;text-decoration:underline;}
+
+        .amount-row{margin-top:10px;display:flex;gap:12px;justify-content:center;align-items:center;font-weight:700;}
+        .usd-toggle{font-weight:600;color:#6d6d7a;font-size:13px;text-decoration:underline;cursor:pointer;}
+
+        .qr-wrap{margin-top:16px;display:flex;justify-content:center;}
+        .qr-img{width:150px;height:150px;border-radius:8px;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px rgba(16,20,40,0.08);border:6px solid white;}
+        
+        .right-payment{width:320px;max-width:40%;padding:34px;text-align:center;background:linear-gradient(180deg,white,#fff9fb);border-left:1px solid rgba(16,20,40,0.03);}
+        .note{color:var(--color-accent);font-weight:600;margin-top:8px;line-height:1.5;font-size:14px;}
+        .spinner{margin-top:26px;width:96px;height:96px;display:inline-grid;place-items:center;}
+        .footer-payment{padding:16px 20px;display:flex;justify-content:center;color:#6d6d7a;font-size:13px;}
+
+        /* toast */
+        .toast{
+            position:fixed;
+            right:20px;
+            bottom:20px;
+            background:#111;
+            color:#fff;
+            padding:10px 14px;
+            border-radius:8px;
+            opacity:0;
+            transform:translateY(18px);
+            transition:all .28s cubic-bezier(.2,.9,.3,1);
+            pointer-events:none;
+            z-index:99;
+        }
+        .toast.show{opacity:1;transform:none;pointer-events:auto}
+
+        /* responsiveness */
+        @media (max-width:880px){
+            .profit-card-payment{width:92%}
+            .main-payment{flex-direction:column}
+            .right-payment{width:100%; max-width:100%; border-left:none; border-top:1px solid rgba(16,20,40,0.03)}
+            .left-payment{padding:24px}
+            .right-payment{padding:20px}
+        }
+    
